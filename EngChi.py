@@ -11,23 +11,23 @@
 #
 #########################
 from random import *
-inputw=None
-word_list=[]
-wrong_word=[]
-word_file = open('nce4.txt')
-for line in word_file:
-	word_list.append(line)
-rest_list=word_list
-while rest_list!=[]:
-	word=rest_list[randint(0,len(rest_list)-1)]
-	rest_list.remove(word)
-	eng,chi,wtype=word.split(',',3)
-	input(eng+wtype)
-	inputw=input(chi)
-	if inputw!=' ':
-		wrong_word.append(word)
-wrong_file=open('wrong','w')
-wrong_file.writelines(wrong_word)
-word_file.close
-wrong_file.close
+INPUTW=None
+WORD_LIST=[]
+WRONG_WORD=[]
+WORD_FILE=open('nce4.txt')
+for LINE in WORD_FILE:
+	WORD_LIST.append(line)
+REST_LIST=WORD_LIST
+while REST_LIST!=[]:
+	WORD=REST_LIST[randint(0,len(REST_LIST)-1)]
+	REST_LIST.remove(WORD)
+	ENG,CHI,WTYPE=WORD.split(',',3)
+	input(ENG+WTYPE)
+	INPUTW=input(CHI)
+	if INPUTW!=' ':
+		WRONG_WORD.append(WORD)
+WRONG_FILE=open('wrong','w')
+WRONG_FILE.writelines(WRONG_WORD)
+WORD_FILE.close
+WRONG_FILE.close
 	
